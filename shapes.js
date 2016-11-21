@@ -1,5 +1,4 @@
 // *******************************************************
-// CS 174a Graphics Example Code
 // Shapes.js - Defines a number of objects that inherit from the Shape class.  Each manages lists of its own vertex positions, vertex normals, and texture coordinates per vertex.  
 // Instantiating a shape automatically calls OpenGL functions to pass each list into a buffer in the graphics card's memory.
 
@@ -393,7 +392,7 @@ inherit(text_line, shape);
 
 function capped_cylinder() // Combine a tube and two flattened triangle fans to make a solid cylinder
 {
-    shape.call(this); // Inherit class shape’s array members by calling parent constructor
+    shape.call(this); // Inherit class shapeÂ’s array members by calling parent constructor
 
     this.populate = (function (self) {
         self.m_tube = new cylindrical_strip(); self.m_fan = new triangle_fan_full;
@@ -413,7 +412,7 @@ function capped_cylinder() // Combine a tube and two flattened triangle fans to 
 }
 inherit(capped_cylinder, shape);
 
-function star(points_transform)// Argument points_transform: Always identity if we’re just building a windmill. It does good when building other
+function star(points_transform)// Argument points_transform: Always identity if weÂ’re just building a windmill. It does good when building other
     // compound shapes by populating them with a pre-transformed windmill
 {
     shape.call(this);
@@ -458,7 +457,7 @@ star.prototype.populate = function (recipient, points_transform) // The meat of 
         recipient.vertices[i] = vec3(mult_vec(points_transform, vec4(recipient.vertices[i], 1)));
 };
 
-function octahedron(points_transform)// Argument points_transform: Always identity if we’re just building a windmill. It does good when building other
+function octahedron(points_transform)// Argument points_transform: Always identity if weÂ’re just building a windmill. It does good when building other
     // compound shapes by populating them with a pre-transformed windmill
 {
     shape.call(this);
