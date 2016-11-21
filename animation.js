@@ -1,5 +1,4 @@
 // *******************************************************
-// CS 174a Graphics Example Code
 // animation.js - The main file and program start point.  The class definition here describes how to display an Animation and how it will react to key and mouse input.  Right now it has 
 // very little in it - you will fill it in with all your shape drawing calls and any extra key / mouse controls.  
 
